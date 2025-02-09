@@ -11,9 +11,19 @@
 
 package com.alexlar163.duplicate_encoder;
 
+
 public class DuplicateEncoder {
-    static String encode(String word){
-        return word;
+    public static void main(String[] args) {
+        System.out.println(DuplicateEncoder.encode("Prespecialized"));
+    }
+    static String encode(String word) {
+        word = word.toLowerCase();
+        String result = "";
+        for (int i=0; i<word.length(); i++) {
+            boolean isMore = word.indexOf(word.charAt(i)) != word.lastIndexOf(word.charAt(i));
+            result = result.concat(isMore ? ")" : "(");
+        }
+        return result;
     }
 }
 
