@@ -15,10 +15,15 @@
 package com.alexlar163.friend_or_foe;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 class Kata {
+    public static void main (String[] args) {
+        List<String> friendList = List.of("Ryan", "Kieran", "Jason", "Yous");
+        System.out.println(friend(friendList));
+    }
+
     public static List<String> friend(List<String> x){
-        // Your code here
-        return null;
+        return x.stream().filter(item -> item.length() == 4).collect(Collectors.toList());
     }
 }
