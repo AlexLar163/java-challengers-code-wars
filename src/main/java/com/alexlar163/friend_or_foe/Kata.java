@@ -24,6 +24,6 @@ class Kata {
     }
 
     public static List<String> friend(List<String> x){
-        return x.stream().filter(item -> item.length() == 4).collect(Collectors.toList());
+        return x.stream().filter(item -> item.length() == 4).toList();
     }
 }
