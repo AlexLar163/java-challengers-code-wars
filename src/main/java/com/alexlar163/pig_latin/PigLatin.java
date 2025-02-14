@@ -15,16 +15,7 @@ public class PigLatin {
         System.out.println(pigIt("tora o mores !"));
     }
     public static String pigIt(String str) {
-        String[] strList = str.split(" ");
-        for (int i = 0; i < strList.length; i++){
-            char firstChar = strList[i].charAt(0);
-            if(strList[i].matches("[a-zA-Z]+")) {
-                strList[i] = strList[i]
-                        .substring(1)
-                        .concat(firstChar + "ay");
-            }
-        }
-        return String.join(" ", strList);
+        return str.replaceAll("(\\w)(\\w*)", "$2$1ay");
     }
 }
 
