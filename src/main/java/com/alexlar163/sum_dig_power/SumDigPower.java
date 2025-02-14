@@ -63,7 +63,6 @@ package com.alexlar163.sum_dig_power;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 class SumDigPower {
     public static void main(String[] args) {
@@ -81,13 +80,7 @@ class SumDigPower {
                          (long) Math.pow(Character.getNumericValue(value), index.getAndIncrement())
                     )
                     .sum();
-            System.out.println("finalNum: " + finalNum);
-            System.out.println("num: " + num);
-            if(finalNum == Long.parseLong(num)) {
-                resultList.add(finalNum);
-            }
-
-
+            if(finalNum == Long.parseLong(num)) resultList.add(finalNum);
         }
         return resultList;
     }
