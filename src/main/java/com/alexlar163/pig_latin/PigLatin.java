@@ -7,8 +7,6 @@
  */
 package com.alexlar163.pig_latin;
 
-import java.util.Arrays;
-
 public class PigLatin {
     public static void main(String[] args) {
 //        System.out.println(pigIt("Pig latin is cool"));
